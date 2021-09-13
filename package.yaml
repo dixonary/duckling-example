@@ -1,0 +1,37 @@
+name:                duckling-example
+version:             0.1.0.0
+github:              "dixonary/duckling-example"
+license:             BSD3
+author:              "Alex Dixon"
+maintainer:          "alex@dixonary.co.uk"
+copyright:           "2021 Alex Dixon"
+
+extra-source-files:
+- README.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/dixonary/duckling-example#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- unordered-containers
+- text
+- time
+- timezone-series
+- timezone-olson
+- duckling
+
+executables:
+  duckling-example-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
